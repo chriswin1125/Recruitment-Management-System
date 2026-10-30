@@ -77,6 +77,6 @@ A full-stack Recruitment Management System built with the MERN stack (MongoDB, E
    ```bash
    npm run dev
    ```
-   <img width="1917" height="902" alt="image" src="https://github.com/user-attachments/assets/7cd06aa3-3343-4fc7-8826-46097b7778cd" />
+<img width="1917" height="902" alt="image" src="https://github.com/user-attachments/assets/7cd06aa3-3343-4fc7-8826-46097b7778cd" />
 <img width="1896" height="902" alt="image" src="https://github.com/user-attachments/assets/62184683-7b1e-41f0-9637-7e0122d92f7e" />
 <img width="1901" height="902" alt="image" src="https://github.com/user-attachments/assets/fd9544ff-ac1f-4093-a72a-ddbe212102d2" />
