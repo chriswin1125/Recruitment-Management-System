@@ -54,18 +54,29 @@ app.use((req, res) => {
   res.status(404).json({ message: 'Route not found' });
 });
 
+// Health check endpoint for Render / monitoring
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', db: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected' });
+});
+
+// Start HTTP server immediately so Render detects open port
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
+
 // Database connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/recruitment_db')
-  .then(() => {
-    console.log('✅ MongoDB connected successfully');
-    const PORT = process.env.PORT || 5000;
-    app.listen(PORT, () => {
-      console.log(`🚀 Server running on port ${PORT}`);
+const mongoUri = process.env.MONGODB_URI;
+if (!mongoUri) {
+  console.error('❌ MONGODB_URI environment variable is missing!');
+} else {
+  mongoose.connect(mongoUri)
+    .then(() => {
+      console.log('✅ MongoDB connected successfully');
+    })
+    .catch(err => {
+      console.error('❌ MongoDB connection error:', err.message);
     });
-  })
-  .catch(err => {
-    console.error('❌ MongoDB connection error:', err);
-    process.exit(1);
-  });
+}
 
 module.exports = app;
