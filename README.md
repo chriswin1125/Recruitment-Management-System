@@ -4,7 +4,7 @@ A full-stack Recruitment Management System built with the MERN stack (MongoDB, E
 
 ## 🚀 Live Demo
 
-- **Live Application**: [https://prorecruitter.vercel.app](https://prorecruitter.vercel.app)
+- **Live Application**: [https://prorecruiter.vercel.app](https://prorecruiter.vercel.app)
 
 ## Features
 
