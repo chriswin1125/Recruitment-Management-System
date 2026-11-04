@@ -2,6 +2,10 @@
 
 A full-stack Recruitment Management System built with the MERN stack (MongoDB, Express, React, Node.js) and styled with Tailwind CSS.
 
+## 🚀 Live Demo
+
+- **Live Application**: [https://prorecruitter.vercel.app](https://prorecruitter.vercel.app)
+
 ## Features
 
 - **Role-based Authentication**: Candidates, Recruiters, and Admins.
